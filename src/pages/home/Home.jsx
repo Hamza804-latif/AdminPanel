@@ -5,6 +5,7 @@ import "./Home.scss";
 import Widget from "../../components/widgets/Widget";
 import Featured from "../../components/featured/Featured";
 import Charts from "../../components/charts/Charts";
+import Table from "../../components/table/Table";
 
 const Home = () => {
   return (
@@ -21,6 +22,10 @@ const Home = () => {
         <div className="charts">
           <Featured />
           <Charts />
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transactions</div>
+          <Table />
         </div>
       </div>
     </div>
