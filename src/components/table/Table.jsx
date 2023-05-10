@@ -19,6 +19,16 @@ const rows = [
     method: "Cash On Delivery",
     status: "approved",
   },
+  {
+    id: "3242332",
+    product: "Tablet",
+    img: "https://www.ineedamobile.com/wp-content/uploads/2019/03/iphone-x-600x598.png",
+    customer: "Arslan",
+    date: "12 march",
+    amount: 100,
+    method: "Cash On Delivery",
+    status: "pending",
+  },
 
   {
     id: "324435",
@@ -38,7 +48,7 @@ const rows = [
     date: "12 march",
     amount: 100,
     method: "Cash On Delivery",
-    status: "approved",
+    status: "pending",
   },
 ];
 
@@ -66,7 +76,7 @@ const List = () => {
               <TableCell className="tableCell">{row.id}</TableCell>
               <TableCell className="tableCell">
                 <div className="cellWrapper">
-                  <img src={row.img} alt="product" />
+                  <img src={row.img} alt="product" className="image" />
                   {row.product}
                 </div>
               </TableCell>
@@ -74,7 +84,9 @@ const List = () => {
               <TableCell className="tableCell">{row.date}</TableCell>
               <TableCell className="tableCell">{row.amount}</TableCell>
               <TableCell className="tableCell">{row.method}</TableCell>
-              <TableCell className="tableCell">{row.status}</TableCell>
+              <TableCell className="tableCell">
+                <span className={`status ${row.status}`}>{row.status}</span>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
